@@ -29,7 +29,7 @@ app.use('/users', usersRouter);
 // 3. O PULO DO GATO: Direcionar qualquer outra rota para o Angular
 // Este bloco DEVE vir antes do tratamento de erro 404
 app.get('*', (req, res) => {
-  res.sendFile(path.join(angularDistPath, 'index.html'));
+  res.sendFile(path.join(angularDistPath, 'index.csr.html'));
 });
 
 // 4. Se não for arquivo estático, nem rota de API, nem rota do Angular, aí sim dá 404

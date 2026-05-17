@@ -8,7 +8,7 @@ import { MenuComponent } from './menu/menu.component';
   imports: [RouterOutlet,MenuComponent],
   template: `<h1>Site Pôr do Sol rodando com Angular!</h1>`,
   templateUrl: './app.html',
-  styles: ['./app.css'],
+  styleUrls: ['./app.css'],
 })
 export class AppComponent {
   title = 'frontend';
