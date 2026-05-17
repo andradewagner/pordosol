@@ -1,57 +1,42 @@
 <div class="container-prestacao">
-  <header class="topo-pagina">
-    <h1>Prestação de Contas</h1>
-    <p>Mês de referência: <strong>{{ mesReferencia }}</strong></p>
-  </header>
+  
+  <!-- TELA DE LOGIN (Caso não esteja logado) -->
+  <div *ngIf="!estaLogado" class="tela-login">
+    <header class="topo-pagina">
+      <h1>Área Restrita</h1>
+      <p>Digite as credenciais fornecidas pela administração para ver a prestação de contas.</p>
+    </header>
 
-  <!-- Card de Saldo Geral (Estilo FinTech) -->
-  <div class="card-saldo">
-    <p class="titulo-saldo">Saldo do Período</p>
-    <p class="valor-saldo" [ngClass]="{'positivo': saldoAtual >= 0, 'negativo': saldoAtual < 0}">
-      {{ saldoAtual | currency:'BRL':'symbol':'1.2-2' }}
-    </p>
-    
-    <div class="resumo-linhas">
-      <div class="linha-financeira">
-        <span>Arrecadação (+)</span>
-        <strong class="verde">{{ totalReceitas | currency:'BRL':'symbol':'1.2-2' }}</strong>
+    <form (ngSubmit)="executarLogin()" class="formulario-login">
+      <div class="campo-grupo">
+        <label for="codigo">Código do Morador</label>
+        <input type="text" id="codigo" name="codigo" [(ngModel)]="codigo" placeholder="Ex: pordosol123" required>
       </div>
-      <div class="linha-financeira">
-        <span>Despesas (-)</span>
-        <strong class="vermelho">{{ totalDespesas | currency:'BRL':'symbol':'1.2-2' }}</strong>
+
+      <div class="campo-grupo">
+        <label for="senha">Senha de Acesso</label>
+        <input type="password" id="senha" name="senha" [(ngModel)]="senha" placeholder="••••••••" required>
       </div>
-    </div>
+
+      <p *ngIf="erroMensagem" class="erro-texto">{{ erroMensagem }}</p>
+
+      <button type="submit" class="btn-principal">Entrar no Sistema</button>
+    </form>
   </div>
 
-  <!-- Gráfico de Distribuição dos Gastos/Entradas -->
-  <section class="secao-detalhes">
-    <h2>Principais Movimentações</h2>
-    <div class="lista-fluxo">
-      <div class="item-fluxo" *ngFor="let item of fluxo">
-        <div class="info-item">
-          <span class="nome-categoria">{{ item.categoria }}</span>
-          <span class="valor-categoria" [ngClass]="item.tipo">
-            {{ item.tipo === 'receita' ? '+' : '-' }} {{ item.valor | currency:'BRL':'symbol':'1.2-2' }}
-          </span>
-        </div>
-        <!-- Barra de Progresso CSS Puríssimo -->
-        <div class="barra-fundo">
-          <div class="barra-progresso" 
-               [ngClass]="item.tipo" 
-               [style.width.%]="item.porcentagem">
-          </div>
-        </div>
+  <!-- CONTEÚDO DA PRESTAÇÃO (Exibe apenas se o login estiver ok) -->
+  <div *ngIf="estaLogado">
+    <header class="topo-pagina header-logado">
+      <div>
+        <h1>Prestação de Contas</h1>
+        <p>Mês de referência: <strong>{{ mesReferencia }}</strong></p>
       </div>
-    </div>
-  </section>
+      <button class="btn-logout" (click)="fazerLogout()">Sair ×</button>
+    </header>
 
-  <!-- Botão de Ação para Transparência Máxima -->
-  <div class="acoes-container">
-    <!--button class="btn-secundario" (click)="baixarRelatorioCompleto()">
-      <svg xmlns="http://w3.org" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="icone-download">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
-      </svg>
-      Baixar Balancete Completo (PDF)
-    </button-->
+    <!-- O resto do HTML do seu painel de finanças vai aqui embaixo... -->
+    <!-- (Card de Saldo Geral, Listas, Barras de Progresso, etc.) -->
+
   </div>
+
 </div>
