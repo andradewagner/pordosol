@@ -1,0 +1,20 @@
+.contacts {
+  display: flex;            /* Ativa o modo flexível e alinha os filhos em linha */
+  gap: 16px;                /* Cria um espaçamento automático entre as caixas */
+  width: 100%;              /* Faz o container ocupar a largura total disponível */
+}
+
+.contact-item {
+  flex: 1;                  /* Faz com que as 3 caixas dividam o espaço igualmente */
+  padding: 20px;            /* Espaçamento interno apenas para visualização */
+  background-color: #f0f0f0;/* Cor de fundo cinza */
+  border: 1px solid #ddd;   /* Borda fina */
+  text-align: center;
+  vertical-align: middle;
+}
+
+.contact-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}

@@ -38,6 +38,10 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'frontend/dist/frontend/browser/index.html'));
+});
+
 // Exporta o app (útil para testes automatizados)
 module.exports = app;
 
