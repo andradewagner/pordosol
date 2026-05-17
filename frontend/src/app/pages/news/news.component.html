@@ -1,1 +1,40 @@
-<h1 style="color:red">PÁGINA DE NOTÍCIAS</h1>
+<div class="container-news">
+  <header class="topo-pagina">
+    <h1>Mural de Novidades</h1>
+    <p>Fique por dentro de tudo o que acontece no condomínio</p>
+  </header>
+
+  <div class="feed-noticias">
+    <article class="card-noticia" *ngFor="let noticia of noticias">
+      
+      <!-- Imagem de Destaque (Exibe apenas se houver) -->
+      <div class="capa-noticia" *ngIf="noticia.imagemUrl">
+        <img [src]="noticia.imagemUrl" [alt]="noticia.titulo">
+      </div>
+
+      <div class="corpo-noticia">
+        <!-- Metadados: Categoria e Data -->
+        <div class="meta-info">
+          <span class="badge-categoria" [ngClass]="noticia.categoria.toLowerCase()">
+            {{ noticia.categoria }}
+          </span>
+          <span class="data-publicacao">{{ noticia.data }}</span>
+        </div>
+
+        <!-- Título -->
+        <h2>{{ noticia.titulo }}</h2>
+
+        <!-- Texto Alternável (Resumo vs Completo) -->
+        <p class="texto-noticia">
+          {{ noticia.expandido ? noticia.conteudoCompleto : noticia.resumo }}
+        </p>
+
+        <!-- Botão Discreto de Ler Mais / Recolher -->
+        <button class="btn-ler-mais" (click)="alternarLeitura(noticia)">
+          {{ noticia.expandido ? 'Ler menos ↑' : 'Ler notícia completa →' }}
+        </button>
+      </div>
+
+    </article>
+  </div>
+</div>

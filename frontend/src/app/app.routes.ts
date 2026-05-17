@@ -2,9 +2,16 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { NewsComponent } from './pages/news/news.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { PiscinaComponent } from './piscina/piscina.component';
+import { MercadinhoComponent } from './mercadinho/mercadinho.component';
+import { PrestacaoComponent } from './prestacao/prestacao.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' }, // Redireciona a raiz para /home
+  { path: 'home', component: HomeComponent },
+  { path: 'contact', component: ContactComponent },
   { path: 'news', component: NewsComponent },
-  { path: 'contact', component: ContactComponent }
+  { path: 'piscina', component: PiscinaComponent },
+  { path: 'mercadinho', component: MercadinhoComponent },
+  { path: 'prestacao', component: PrestacaoComponent },
 ];

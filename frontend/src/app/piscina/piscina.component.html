@@ -1,0 +1,33 @@
+<div class="container-piscina">
+  <!-- Imagem de Destaque com efeito elegante -->
+  <div class="capa-piscina">
+    <img src="https://t4.ftcdn.net/jpg/03/08/68/19/360_F_308681965_THe4Yokip5JDxk5oSQBhMGqWwDazKeYd.jpg" alt="Área da Piscina" class="imagem-capa">
+    <div class="badge-status" [ngClass]="{'aberta': piscinaAberta, 'fechada': !piscinaAberta}">
+      {{ piscinaAberta ? '● Aberta Agora' : '○ Fechada' }}
+    </div>
+  </div>
+
+  <!-- Cabeçalho da Página -->
+  <header class="topo-pagina">
+    <h1>Área da Piscina</h1>
+    <p class="horario">{{ horarioFuncionamento }}</p>
+  </header>
+
+  <!-- Seção de Avisos / Regras -->
+  <section class="secao-regras">
+    <h2>Regras de Convivência</h2>
+    <ul class="lista-regras">
+      <li *ngFor="let regra of regras">
+        <span class="marcador">✓</span>
+        <p>{{ regra }}</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Botão de Ação Principal -->
+  <div class="acoes-container">
+    <button class="btn-principal" (click)="solicitarReserva()">
+      Reservar Espaço / Churrasqueira
+    </button>
+  </div>
+</div>

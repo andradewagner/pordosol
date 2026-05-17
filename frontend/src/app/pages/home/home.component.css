@@ -1,4 +1,10 @@
 p {
-    margin-top: 1.5rem;
-    color: white;
-  }
+    color: #227093;
+}
+
+.home {
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 0 20px;
+}

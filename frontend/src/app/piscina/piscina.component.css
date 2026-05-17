@@ -1,0 +1,131 @@
+:host {
+  display: block;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.container-piscina {
+  padding: 20px;
+  max-width: 480px; /* Alinhado ao padrão mobile anterior */
+  margin: 0 auto;
+}
+
+/* Área da Foto de Capa */
+.capa-piscina {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  z-index: 0;
+}
+
+.imagem-capa {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz a foto se adaptar perfeitamente ao corte */
+}
+
+/* Tag flutuante sobre a imagem */
+.badge-status {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+}
+
+.badge-status.aberta {
+  background-color: rgba(52, 199, 89, 0.9); /* Verde Apple */
+  color: #fff;
+}
+
+.badge-status.fechada {
+  background-color: rgba(255, 59, 48, 0.9); /* Vermelho Apple */
+  color: #fff;
+}
+
+/* Cabeçalho */
+.topo-pagina h1 {
+  font-size: 24px;
+  color: #1d1d1f;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.topo-pagina .horario {
+  font-size: 14px;
+  color: #0066cc; /* Azul piscina */
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+/* Lista de Regras */
+.secao-regras h2 {
+  font-size: 16px;
+  color: #1d1d1f;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.lista-regras {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.lista-regras li {
+  display: flex;
+  align-items: flex-start;
+  background-color: #ffffff;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid #f0f0f2;
+}
+
+.marcador {
+  color: #0066cc;
+  font-weight: bold;
+  margin-right: 12px;
+  margin-top: 1px;
+}
+
+.lista-regras p {
+  font-size: 14px;
+  color: #48484a;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Botão Elegante de Ação */
+.acoes-container {
+  margin-top: 24px;
+  margin-bottom: 40px; /* Espaço para não bater no rodapé */
+}
+
+.btn-principal {
+  width: 100%;
+  background-color: #0066cc;
+  color: #ffffff;
+  border: none;
+  padding: 16px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-principal:active {
+  background-color: #0055b3;
+  transform: scale(0.99);
+}

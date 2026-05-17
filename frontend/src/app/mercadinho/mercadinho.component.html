@@ -1,0 +1,56 @@
+<div class="container-mercadinho">
+  <!-- Imagem de Capa do Mercadinho -->
+  <div class="capa-mercado">
+    <img src="https://meumercadinho24h.com.br/wp-content/uploads/2023/06/Condominio-mini-mercado-1024x756.png" alt="Mercadinho do Condomínio" class="imagem-capa">
+    <div class="badge-24h">24 HORAS</div>
+  </div>
+
+  <!-- Informações Principais -->
+  <header class="topo-pagina">
+    <h1>Market Condomínio</h1>
+    <p class="localizacao">{{ localizacao }}</p>
+    <p class="horario">{{ funcionamento }}</p>
+  </header>
+
+  <!-- Bloco Rápido: Como Comprar -->
+  <section class="card-tutorial">
+    <h2>Como comprar?</h2>
+    <div class="passos">
+      <div class="passo">
+        <span class="numero">1</span>
+        <p>Vá até o mercado e escolha seus produtos.</p>
+      </div>
+      <div class="passo">
+        <span class="numero">2</span>
+        <p>Use o totem.</p>
+      </div>
+      <div class="passo">
+        <span class="numero">3</span>
+        <p>Escaneie o código de barras e pague no cartão/Pix.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Categorias Disponíveis -->
+  <section class="secao-categorias">
+    <h2>O que você encontra lá</h2>
+    <div class="lista-categorias">
+      <div class="card-categoria" *ngFor="let cat of categorias">
+        <div class="avatar-categoria">
+          <img [src]="cat.iconeUrl" [alt]="cat.nome" class="icone-img">
+        </div>
+        <div class="info-categoria">
+          <h3>{{ cat.nome }}</h3>
+          <p>{{ cat.itens }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Botão de Ação para Baixar/Abrir o App do Parceiro -->
+  <div class="acoes-container">
+    <button class="btn-principal" (click)="abrirAppMercado()">
+      Baixar Aplicativo do Mercado
+    </button>
+  </div>
+</div>

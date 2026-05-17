@@ -1,0 +1,188 @@
+:host {
+  display: block;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.container-mercadinho {
+  padding: 20px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Capa */
+.capa-mercado {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.imagem-capa {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badge-24h {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background-color: #1d1d1f;
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Cabeçalho */
+.topo-pagina h1 {
+  font-size: 24px;
+  color: #1d1d1f;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.topo-pagina .localizacao {
+  font-size: 14px;
+  color: #48484a;
+  margin: 0 0 2px 0;
+}
+
+.topo-pagina .horario {
+  font-size: 13px;
+  color: #34c759; /* Verde indicando funcionamento disponível */
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+/* Card Tutorial (Como Comprar) */
+.card-tutorial {
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid #f0f0f2;
+  margin-bottom: 24px;
+}
+
+.card-tutorial h2 {
+  font-size: 16px;
+  color: #1d1d1f;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.passos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.passo {
+  display: flex;
+  align-items: center;
+}
+
+.numero {
+  background-color: #f2f2f7;
+  color: #1d1d1f;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.passo p {
+  font-size: 13px;
+  color: #48484a;
+  margin: 0;
+}
+
+/* Seção de Categorias */
+.secao-categorias h2 {
+  font-size: 16px;
+  color: #1d1d1f;
+  margin-bottom: 12px;
+}
+
+.lista-categorias {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-categoria {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid #f0f0f2;
+}
+
+.avatar-categoria {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: #f5f5f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.icone-img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+.info-categoria h3 {
+  font-size: 14px;
+  color: #1d1d1f;
+  margin: 0 0 2px 0;
+  font-weight: 600;
+}
+
+.info-categoria p {
+  font-size: 12px;
+  color: #86868b;
+  margin: 0;
+}
+
+/* Botão Principal */
+.acoes-container {
+  margin-top: 24px;
+  margin-bottom: 40px;
+}
+
+.btn-principal {
+  width: 100%;
+  background-color: #1d1d1f; /* Preto minimalista elegante */
+  color: #ffffff;
+  border: none;
+  padding: 16px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn-principal:active {
+  opacity: 0.9;
+  transform: scale(0.99);
+}
