@@ -5,6 +5,7 @@ Ideal para aplicações mobile-first, rápidas e leves.
 
 ### 📦 Estrutura do Projeto
 
+```
 pordosol/
 ├── app.js                     # Servidor Express
 ├── routes/                    # Rotas de API
@@ -12,6 +13,7 @@ pordosol/
 │   ├── src/
 │   └── dist/frontend/browser/ # Build final (CSR)
 └── package.json
+```
 
 ### 🚀 Tecnologias Utilizadas
 
