@@ -8,3 +8,216 @@ p {
     border-radius: 10px;
     padding: 0 20px;
 }
+
+/* Container Principal */
+.home-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #333333;
+  line-height: 1.6;
+}
+
+/* Cabeçalho / Hero */
+.home-hero {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.home-hero h1 {
+  font-size: 2.5rem;
+  color: #1a365d; /* Azul escuro corporativo/condomínio */
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.home-hero .subtitle {
+  font-size: 1.2rem;
+  color: #4a5568;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.home-hero .description {
+  font-size: 1rem;
+  color: #718096;
+}
+
+.section-divider {
+  border: 0;
+  height: 1px;
+  background: #e2e8f0;
+  margin: 40px 0;
+}
+
+/* Mural de Avisos (Limpeza das Lixeiras) */
+.home-alerts {
+  margin-bottom: 40px;
+}
+
+.alert-card {
+  background-color: #fffaf0; /* Fundo levemente amarelado/alerta */
+  border-left: 5px solid #dd6b20; /* Borda laranja de atenção */
+  padding: 25px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+.alert-badge {
+  display: inline-block;
+  background-color: #dd6b20;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.alert-card h3 {
+  margin: 0 0 5px 0;
+  color: #9c4221;
+  font-size: 1.4rem;
+}
+
+.alert-date {
+  font-size: 0.8rem;
+  color: #a0aec0;
+  margin-bottom: 15px;
+}
+
+/* Seção de Utilidade Pública / Serviços */
+.home-services h2 {
+  font-size: 1.8rem;
+  color: #2d3748;
+  margin-bottom: 20px;
+}
+
+.service-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+  color: #2b6cb0;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/* Lista de Preços das Tags */
+.price-list {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0;
+}
+
+.price-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px dashed #e2e8f0;
+}
+
+.item-name {
+  font-weight: 600;
+  flex: 1;
+}
+
+.item-status {
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+
+.item-status.available {
+  background-color: #c6f6d5;
+  color: #22543d;
+}
+
+.item-status.sold-out {
+  background-color: #fed7d7;
+  color: #742a2a;
+}
+
+.item-price {
+  font-weight: 700;
+  color: #2d3748;
+  text-align: right;
+}
+
+.item-price small {
+  display: block;
+  font-weight: normal;
+  font-size: 0.75rem;
+  color: #a0aec0;
+}
+
+.highlight-text {
+  font-style: italic;
+  color: #4a5568;
+  margin-top: 20px;
+  border-top: 1px solid #edf2f7;
+  padding-top: 15px;
+}
+
+/* Rodapé / Assinaturas */
+.home-management {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.home-management p {
+  margin-bottom: 15px;
+  color: #718096;
+}
+
+.management-team {
+  display: flex;
+  gap: 40px;
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+}
+
+.member strong {
+  font-size: 1.1rem;
+  color: #2d3748;
+}
+
+.member span {
+  font-size: 0.9rem;
+  color: #718096;
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 600px) {
+  .price-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .item-status {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+  
+  .item-price {
+    text-align: left;
+  }
+  
+  .management-team {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
