@@ -45,7 +45,7 @@ export class ContactComponent {
       nome: 'Administradora CS',
       servico: 'Administraçao condominial',
       telefone: '(21) 2548-2426',      
-      imagemUrl: 'https://csimobiliaria.com.br/\nemail: csimobiliaria@csimobiliaria.com.br'
+      imagemUrl: '/logo-cs.png'
     }
   ];
 
