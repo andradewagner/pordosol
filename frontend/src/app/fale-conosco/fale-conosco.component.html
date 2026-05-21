@@ -13,23 +13,23 @@
         <form class="contact-form" action="https://formsubmit.co/condominiodpds@gmail.com" method="POST">
           <div class="form-group">
             <label for="nome">Nome Completo</label>
-            <input type="text" id="nome" placeholder="Digite seu nome">
+            <input name="Nome" type="text" id="nome" placeholder="Digite seu nome" required>
           </div>
 
           <div class="form-row">
             <div class="form-group">
               <label for="apto">Apartamento</label>
-              <input type="text" id="apto" placeholder="Ex: Apt 1008">
+              <input name="Unidade" type="text" id="apto" placeholder="Ex: Apt 1008" required>
             </div>
             <div class="form-group">
               <label for="telefone">WhatsApp</label>
-              <input type="tel" id="telefone" placeholder="(00) 00000-0000">
+              <input neme="Telefone" type="tel" id="telefone" placeholder="(00) 00000-0000">
             </div>
           </div>
 
           <div class="form-group">
             <label for="assunto">Assunto</label>
-            <select id="assunto">
+            <select name="Assunto" id="assunto">
               <option value="duvida">Dúvida</option>
               <option value="sugestao">Sugestão / Elogio</option>
               <option value="reclamacao">Reclamação / Ocorrência</option>
@@ -40,7 +40,7 @@
 
           <div class="form-group">
             <label for="mensagem">Mensagem</label>
-            <textarea id="mensagem" rows="5" placeholder="Como podemos ajudar?"></textarea>
+            <textarea name="Mensagem" id="mensagem" rows="5" placeholder="Como podemos ajudar?" required></textarea>
           </div>
 
           <button type="submit" class="btn-submit">Enviar Mensagem</button>
