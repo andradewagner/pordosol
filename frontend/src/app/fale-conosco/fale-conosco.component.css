@@ -150,3 +150,7 @@ input:focus, textarea:focus {
   text-align: center;
   border: 1px solid #38a169;
 }
+
+.info-card {
+    margin-bottom: 20px;
+}
