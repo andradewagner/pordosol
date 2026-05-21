@@ -40,6 +40,12 @@ export class ContactComponent {
       servico: 'Fornecimento de Gás',
       telefone: '0800 240197',
       imagemUrl: 'https://www.minhanaturgy.com.br/hc/theming_assets/01HZPP6EVY0M1TK4RKD7646RAB'
+    },
+    {
+      nome: 'Administradora CS',
+      servico: 'Administraçao condominial',
+      telefone: '(21) 2548-2426',      
+      imagemUrl: 'https://csimobiliaria.com.br/\nemail: csimobiliaria@csimobiliaria.com.br'
     }
   ];
 
