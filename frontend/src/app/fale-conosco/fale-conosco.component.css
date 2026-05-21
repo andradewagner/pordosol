@@ -1,0 +1,152 @@
+.fale-conosco-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  color: #2d3748;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  color: #1a365d;
+  margin-bottom: 10px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 30px;
+}
+
+.card, .info-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  color: #2b6cb0;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #ebf8ff;
+  padding-bottom: 10px;
+}
+
+/* Estilos do Formulário */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e0;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #f8fafc;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #3182ce;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 15px;
+  background-color: #2b6cb0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-submit:hover {
+  background-color: #2c5282;
+}
+
+/* Estilos de Informação */
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.icon {
+  font-size: 1.5rem;
+  background: #ebf8ff;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.text strong {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.text span {
+  color: #4a5568;
+  font-size: 0.95rem;
+}
+
+.schedule p {
+  margin-bottom: 8px;
+}
+
+.emergency {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px dashed #cbd5e0;
+  color: #c53030;
+}
+
+/* Responsividade */
+@media (max-width: 850px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.success-message {
+  background-color: #c6f6d5;
+  color: #22543d;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-align: center;
+  border: 1px solid #38a169;
+}
